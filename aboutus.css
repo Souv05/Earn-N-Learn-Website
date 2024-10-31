@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(255, 255, 255, 0.91); /* Transparent white */
+    color: #000; /* Black text */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Gives a blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100px; /* Slimmer header */
+    transition: background-color 0.3s ease;
+}
+
+/* Container for logo and navigation */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Full width */
+    padding: 0 10px; /* Reduced padding */
+}
+
+/* Logo Styling */
+.logo img {
+    width: 140px; /* Adjusted logo size */
+    height: 110px;
+}
+
+/* Sticky Header effect when scrolling */
+header.sticky {
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque when sticky */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Adjusted gap for slimmer look */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #000; /* Black text for links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px; /* Reduced padding for slimmer text */
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #00d4ff; /* Blue hover effect */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: #000; /* Black text for dropdown items */
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* Mission, Global Presence, History, Partnerships */
+.mission-statement, 
+.global-presence, 
+.history, 
+.partnerships {
+    background: #fff;
+    margin: 140px auto 40px auto; /* Added top margin to create space below header */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* Slightly wider for larger screens */
+    text-align: left;
+}
+
+.mission-statement h2, 
+.global-presence h2, 
+.history h2, 
+.partnerships h2 {
+    font-size: 2.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.mission-statement p, 
+.global-presence p, 
+.history p, 
+.partnerships p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #7f8c8d;
+}
+
+/* Image and Logos */
+.global-presence img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.history ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.history ul li {
+    margin: 10px 0;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.partnerships .client-logos img {
+    max-width: 120px;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.partnerships .client-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Call-to-Action */
+.cta {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.cta a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #e67e22;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .mission-statement h2, 
+    .global-presence h2, 
+    .history h2, 
+    .partnerships h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta a {
+        padding: 10px 20px;
+    }
+}
+/* Footer Section */
+.footer {
+    background-color: #ffffff; /* Light grey background */
+    padding: 20px 10px; /* Reduced padding for a slimmer footer */
+    color: #333;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Reduced gap */
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.footer-column h3 {
+    font-size: 16px; /* Smaller title font */
+    font-weight: 600; /* Slightly lighter font weight */
+    margin-bottom: 10px; /* Reduced margin */
+    color: #000; /* Title color */
+}
+
+.footer-column p, 
+.footer-column ul li a {
+    font-size: 14px; /* Smaller font size */
+    color: #666;
+    margin-bottom: 8px; /* Reduced spacing */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; /* Reduced margin for list items */
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00d4ff; /* Hover color */
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Reduced gap */
+}
+
+.social-media img {
+    width: 20px; /* Smaller social media icons */
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.2); /* Hover animation */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 10px; /* Reduced padding */
+}
+
+.footer-bottom p {
+    font-size: 12px; /* Smaller font for the copyright text */
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column ul {
+        text-align: center;
+    }
+}

@@ -1,0 +1,310 @@
+/* Global reset and styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background gradient */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container max width for content alignment */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    
+    padding: 20px;
+}
+
+/* Header section */
+header {
+    background-color: rgb(255, 255, 255); /* Transparent white */
+    color: #000; /* Black text */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Gives a blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100px; /* Slimmer header */
+    transition: background-color 0.3s ease;
+}
+
+/* Container for logo and navigation */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Full width */
+    padding: 0 10px; /* Reduced padding */
+}
+
+/* Logo Styling */
+.logo img {
+    width: 140px; /* Adjusted logo size */
+    height: 110px;
+}
+
+/* Sticky Header effect when scrolling */
+header.sticky {
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque when sticky */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Adjusted gap for slimmer look */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #000; /* Black text for links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px; /* Reduced padding for slimmer text */
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #00d4ff; /* Blue hover effect */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: #000; /* Black text for dropdown items */
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #00d4ff;
+    color: #fff; /* White text when hovered */
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+}
+
+/* Contact form styling */
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 120px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for form */
+.contact-form:hover {
+    transform: scale(1.02);
+}
+
+/* Form title and description */
+.contact-form h1 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-form p {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form fields */
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Stylish Submit Button */
+.submit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #ffffff; /* Light grey background */
+    padding: 20px 10px; /* Reduced padding */
+    color: #333;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted min width */
+    gap: 20px; /* Reduced gap */
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.footer-column h3 {
+    font-size: 16px; /* Reduced font size */
+    font-weight: 700;
+    margin-bottom: 15px; /* Reduced margin */
+    color: #000; /* Title color */
+}
+
+.footer-column p {
+    font-size: 14px; /* Reduced font size */
+    color: #666;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    font-size: 14px; /* Reduced font size */
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00d4ff; /* Hover color */
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Reduced gap */
+}
+
+.social-media img {
+    width: 20px; /* Adjusted size */
+    height: 20px; /* Adjusted size */
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Slightly reduced hover scale */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 15px; /* Reduced padding */
+}
+
+.footer-bottom p {
+    font-size: 12px; /* Reduced font size */
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stacks items vertically on small screens */
+    }
+
+    .footer-column ul {
+        text-align: center; /* Center-align list on small screens */
+    }
+}
