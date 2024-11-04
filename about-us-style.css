@@ -1,0 +1,499 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #e8f4fa;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.container, .team-info, .unique-selling-points, .testimonials, .social-proof, .cta-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(255, 255, 255, 0.91); /* Transparent white */
+    color: #000; /* Black text */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    backdrop-filter: blur(10px); /* Gives a blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100px; /* Slimmer header */
+    transition: background-color 0.3s ease;
+}
+
+/* Container for logo and navigation */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%; /* Full width */
+    padding: 0 10px; /* Reduced padding */
+}
+
+/* Logo Styling */
+.logo img {
+    width: 140px; /* Adjusted logo size */
+    height: 110px;
+}
+
+/* Sticky Header effect when scrolling */
+header.sticky {
+    background-color: rgba(255, 255, 255, 0.9); /* More opaque when sticky */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Styling */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Adjusted gap for slimmer look */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #000; /* Black text for links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px; /* Reduced padding for slimmer text */
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #00d4ff; /* Blue hover effect */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: #000000; /* Black text for dropdown items */
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+/* About Section */
+.about-section .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(44, 62, 80, 0.1);
+    flex: 1;
+    min-width: 250px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+.leadership {
+    background-color: #f5f7fa; /* Light background for the section */
+    padding: 60px 20px; /* Padding around the section */
+}
+
+.leadership-container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center text */
+    
+}
+
+.leadership h2 {
+    font-size: 2.5em; /* Font size for the heading */
+    color: #2c3e50; /* Primary color for the heading */
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+.leadership-grid {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: space-between; /* Space between cards */
+}
+
+.leader-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(44, 62, 80, 0.3); /* Shadow for depth */
+    margin: 10px; /* Margin around each card */
+    padding: 20px; /* Padding inside each card */
+    flex: 1 1 calc(30% - 20px); /* Responsive width for cards */
+    transition: transform 0.3s ease; /* Transition for hover effect */
+}
+
+.leader-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.leader-photo img {
+    width: 100%; /* Full width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 15px; /* Space below the image */
+    max-width: 150px; /* Max width for images */
+}
+
+.leader-card h3 {
+    font-size: 1.5em; /* Font size for the name */
+    color: #2c3e50; /* Dark color for the name */
+    margin: 10px 0; /* Space above and below the name */
+}
+
+.leader-card h4 {
+    font-size: 1.2em; /* Font size for the title */
+    color: #3498db;
+    margin: 5px 0; /* Space above and below the title */
+}
+
+.leader-card p {
+    font-size: 1em; /* Font size for the description */
+    color: #505c6c;
+    margin-bottom: 15px; /* Space below the description */
+}
+
+.leader-link {
+    display: inline-block; /* Inline-block for button style */
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.leader-link:hover {
+    background-color: #2980b9;
+}
+
+/* testimonial Overview Section */
+/* Section and container styles */
+.testimonial-overview {
+    padding: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.testimonial-container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Wrapper for the slider and buttons */
+.testimonial-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-slider {
+    width: 80%; /* Show 4 boxes */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+/* Grid containing the service cards */
+.testimonial-grid {
+    display: flex;
+    scroll-snap-align: start;
+    gap: 20px;
+}
+
+/* Service card styles */
+.service-card {
+    flex: 0 0 22%; /* Each box is 22% of container width */
+    max-width: 250px;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(44, 62, 80, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Background image for each service card */
+.service-bg {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-card h3,
+.service-card p,
+.service-card .service-link {
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+/* Link styles for the service cards */
+.service-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/* Hover effect for each service card */
+.service-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lifts the card and slightly enlarges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+}
+
+/* Button styles for sliding */
+.slide-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* Left arrow button 
+.left-slide {
+    left: 0;
+}
+
+/* Right arrow button 
+.right-slide {
+    right: 0;
+}
+*/
+/* Hover state for slide buttons */
+.slide-btn:hover {
+    background-color: #2980b9;
+}
+
+
+
+/* Testimonials */
+.testimonial-carousel {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonial {
+    max-width: 400px;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.client-name {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-image: url('assets/backgroundimages/6383572.webp'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.cta-container {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+.cta-container h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease; /* Animation for the headline */
+}
+
+.cta-container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #ddd;
+    animation: fadeInUp 1s ease; /* Animation for the paragraph */
+}
+
+.cta-button {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px 50px;
+    background-color: #00d4ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    animation: bounceIn 1.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #8b898a;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Image Parallax Effect */
+.cta-section {
+    background-attachment: fixed; /* Parallax scrolling */
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-container h2 {
+        font-size: 30px;
+    }
+
+    .cta-container p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        font-size: 20px;
+    }
+}
