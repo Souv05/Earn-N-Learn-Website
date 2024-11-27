@@ -186,16 +186,14 @@ nav ul li a:hover {
     display: flex; /* Use flexbox for layout */
     flex-wrap: wrap; /* Allow wrapping to next line */
     justify-content: space-between; /* Space between cards */
+    gap: 20px;
 }
 
 .leader-card {
-    background-color: #ffffff; /* White background for the card */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(44, 62, 80, 0.3); /* Shadow for depth */
-    margin: 10px; /* Margin around each card */
-    padding: 20px; /* Padding inside each card */
-    flex: 1 1 calc(30% - 20px); /* Responsive width for cards */
-    transition: transform 0.3s ease; /* Transition for hover effect */
+    flex: 1 1 calc(30% - 20px); /* Adjusted width for 10-12 people */
+    margin: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
 }
 
 .leader-card:hover {
@@ -242,6 +240,18 @@ nav ul li a:hover {
     background-color: #2980b9;
 }
 
+@media (max-width: 768px) {
+    .leader-card {
+        flex: 1 1 calc(45% - 20px); /* Adjust to 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .leader-card {
+        flex: 1 1 100%; /* Full width for each card on very small screens */
+    }
+}
+
 /* testimonial Overview Section */
 /* Section and container styles */
 .testimonial-overview {
@@ -265,7 +275,7 @@ nav ul li a:hover {
 }
 
 .testimonial-slider {
-    width: 80%; /* Show 4 boxes */
+    width: 100%; /* Show 4 boxes */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -496,4 +506,8 @@ nav ul li a:hover {
     .cta-button {
         font-size: 20px;
     }
+}
+
+.service-card:nth-child(1) .service-bg {
+    background-image: url('path/to/cutting-edge-technology.jpg');
 }

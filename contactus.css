@@ -87,7 +87,7 @@ nav ul li a:hover {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #000000;
     padding: 10px;
     border-radius: 5px;
     top: 100%;

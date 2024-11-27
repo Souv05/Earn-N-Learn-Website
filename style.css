@@ -301,6 +301,17 @@ header.sticky {
     }
 }
 
+.banner {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.banner-image {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
 /* Services Overview Section */
 /* Section and container styles */
 .services-overview {
